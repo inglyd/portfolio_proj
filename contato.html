@@ -32,13 +32,12 @@
     <!-- Seção Principal da Página (main) -->
     <main>
 
-        
-    <!-- Seção Principal da Página (main) -->
-    <main>
-
         <!-- Seção do Formulário -->
-        <form action="#" method="submit" id="formulario">
-    <label for="nome">Nome: </label>
+        <!--actionendereço pro post, questão de segurança pois as informações vão para o body | o get joga na barra de navegação-->
+        <form action="#" method="post" id="formulario">
+    <!-- label deve existir, nem que seja ficando oculto - por questões de acessibilidade -->
+    <label for="name">Nome: </label>
+    <!--Id é único, clica no nome e seleciona o campo | nome e name são geralmente idênticos-->
     <input type="text" id="name" name="name" placeholder="Digite seu nome" />
     <span id="errNome"></span>
 
@@ -77,9 +76,6 @@
         </iframe>
 
         </article>
-
-    </main>
-
 
     </main>
 
