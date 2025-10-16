@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #f2f2f2; /* Fundo principal */
+  --color-text: #000; /* Texto principal */
+  --color-title: #0077b6; /* Títulos e destaques */
+  --color-accent: #caf0f8; /* Hover, links, detalhes */
+
+  /* 🖋 Tipografia */
+  --font-title: "Baskervville", serif;
+  --font-text: Helvetica, Arial, sans-serif;
+}
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-text);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  color: var(--color-title);
+  font-family: var(--font-title);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+header {
+  background: var(--color-accent);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--color-title);
+  /* text-decoration: underline; */
+  filter: brightness(0) saturate(100%) invert(65%) sepia(98%) saturate(749%)
+    hue-rotate(169deg) brightness(95%) contrast(97%);
+}
+
+#about article {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#about img {
+  width: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+#about p {
+  flex: 1;
+}
+
+#video figure {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-accent);
+  font-weight: bold;
+  text-align: center;
+}
+
+footer section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+footer img {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  /* filter: invert(100%); */
+  transition: filter 0.3s;
+}
+
+footer img:hover {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(98%) saturate(749%)
+    hue-rotate(169deg) brightness(95%) contrast(97%);
+}
+
+.main_contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+form input,
+textarea {
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+  height: 5rem;
+}
+
+form button {
+  background: var(--color-accent);
+  color: var(--color-title);
+  padding: 0.75rem;
+  border: 1px solid var(--color-title);
+  border-radius: 0.75;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--color-title);
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+form span {
+  color: #ff0000;
+  font-size: 0.75rem;
+}
+
+.article_mapa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.article_mapa address {
+  width: 75%;
+}
+
+.article_mapa address p {
+  font-weight: 600;
+}
+
+.article_mapa iframe {
+  align-self: center;
+}
+/* inherit - herda
+id pro js
+classe pro css
+
+rem - texto
+bh, vw - elemntos maiores (section, imagem)
+vmin, vmax - menor e maior valor entre altura e largura na tela, podendo virar e adaptar (menos comum de usar)
+porcentagem não é datela, é do elemento que ela está dentro - relativo ao elemento pai
+*/
