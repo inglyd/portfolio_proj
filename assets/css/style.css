@@ -9,6 +9,7 @@
   --color-text: #000; /* Texto principal */
   --color-title: #0077b6; /* Títulos e destaques */
   --color-accent: #caf0f8; /* Hover, links, detalhes */
+  --color-bg-card: #e0e0e0; /* Fundo de cards ou seções */
 
   /* 🖋 Tipografia */
   --font-title: "Baskervville", serif;
@@ -105,8 +106,9 @@ nav a:hover {
 }
 
 #video figure {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
 }
 
 footer {
@@ -198,7 +200,7 @@ form span {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  background: #fff;
+  background: var(--color-bg-card);
   padding: 1.5rem;
   border-radius: 0.75rem;
 }
@@ -214,6 +216,45 @@ form span {
 .article_mapa iframe {
   align-self: center;
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.project-card {
+  background: var(--color-bg-card);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background: #f0f0f0;
+  color: #555;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
 /* inherit - herda
 id pro js
 classe pro css
