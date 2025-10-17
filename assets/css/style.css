@@ -89,26 +89,9 @@ nav a:hover {
     hue-rotate(169deg) brightness(95%) contrast(97%);
 }
 
-#about article {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-#about img {
-  width: 200px;
-  flex-shrink: 0;
-  border-radius: 50%;
-}
-
-#about p {
-  flex: 1;
-}
-
-#video figure {
-  /* display: flex;
-  justify-content: center; */
-  text-align: center;
+.frame {
+  width: 40vw;
+  aspect-ratio: 16/9;
 }
 
 footer {
@@ -144,118 +127,8 @@ footer img:hover {
     hue-rotate(169deg) brightness(95%) contrast(97%);
 }
 
-.main_contato {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  width: 90%;
-  margin: 2rem auto;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-}
-
-form input,
-textarea {
-  padding: 0.5rem;
-  border-radius: 0.75rem;
-  border: none;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: none;
-  height: 5rem;
-}
-
-form button {
-  background: var(--color-accent);
-  color: var(--color-title);
-  padding: 0.75rem;
-  border: 1px solid var(--color-title);
-  border-radius: 0.75;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: var(--color-title);
-  color: #fff;
-  border: none;
-  transition: 0.3s;
-}
-
-form span {
-  color: #ff0000;
-  font-size: 0.75rem;
-}
-
-.article_mapa {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  background: var(--color-bg-card);
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-}
-
-.article_mapa address {
-  width: 75%;
-}
-
-.article_mapa address p {
-  font-weight: 600;
-}
-
-.article_mapa iframe {
-  align-self: center;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  animation: fadeInUp 0.8s ease;
-}
-
-.project-card {
-  background: var(--color-bg-card);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.tech-tag {
-  background: #f0f0f0;
-  color: #555;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.85em;
-  font-weight: 500;
-}
-
-/* inherit - herda
+/* anotações-aula: 
+inherit - herda
 id pro js
 classe pro css
 
@@ -264,3 +137,15 @@ bh, vw - elemntos maiores (section, imagem)
 vmin, vmax - menor e maior valor entre altura e largura na tela, podendo virar e adaptar (menos comum de usar)
 porcentagem não é datela, é do elemento que ela está dentro - relativo ao elemento pai
 */
+
+@media screen and (max-width: 767px) {
+  header {
+    padding: 10px 15px; 
+    flex-direction: column; 
+  }
+
+  footer {
+    padding: 20px 15px;
+    text-align: center;
+  }
+}

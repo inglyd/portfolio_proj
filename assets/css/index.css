@@ -1,0 +1,32 @@
+#about article {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#about img {
+  width: 200px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+#about p {
+  flex: 1;
+}
+
+#video figure {
+  /* display: flex;
+    justify-content: center; */
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #about article {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about img {
+    width: 150px;
+  }
+}
